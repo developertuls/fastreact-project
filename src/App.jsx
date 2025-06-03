@@ -7,6 +7,7 @@ import './index.css'
 import Cssanimation from './comonents/Cssanimation/Cssanimation';
 
 import Rot from './comonents/Rot';
+import { Outlet } from 'react-router-dom';
 
 
 
@@ -50,6 +51,7 @@ function App() {
 
 
 <Rot></Rot>
+  
 {/* 
 <Counter1></Counter1>
 <Counter2></Counter2> */}
