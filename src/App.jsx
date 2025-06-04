@@ -4,27 +4,8 @@ import './App.css'
 
 
 import './index.css'
-import Cssanimation from './comonents/Cssanimation/Cssanimation';
 
-import Rot from './comonents/Rot';
-import { Outlet } from 'react-router-dom';
-
-
-
-
-
-
-// const count=createContext()
-
-
-
-
-
-
-
-
-
-
+import Rot from './comonents/layout/Rot'
 
 
 function App() {
@@ -41,20 +22,11 @@ function App() {
    
  <div >
 
-
-
-
-
-
 <h1></h1>
-
-
 
 <Rot></Rot>
   
-{/* 
-<Counter1></Counter1>
-<Counter2></Counter2> */}
+
  </div>
   
   );

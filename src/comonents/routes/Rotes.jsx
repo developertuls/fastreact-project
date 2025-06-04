@@ -1,12 +1,18 @@
 import { createBrowserRouter } from "react-router-dom";
-import Rot from "./Rot";
-import Home from "./Home";
-import { About } from "./About";
-import { Contact } from "./Contact";
-import { Blogs } from "./Blogs";
-import Orderpeg from "./Orderpeg";
-import Herosection from "./Herosection";
-import { Logi } from "./Logi";
+import Rot from '../layout/Rot'
+
+
+
+import Home from "../pages/Home";
+import { About } from "../pages/About";
+import { Contact } from "../pages/Contact";
+import { Blogs } from "../pages/Blogs";
+import Orderpeg from '../pages/Orderpeg';
+import { Logi } from "../auth/Logi";
+import { Register } from "../auth/Register";
+
+
+
 
 
 
@@ -38,10 +44,18 @@ import { Logi } from "./Logi";
       Component:Orderpeg
     },
 
-    {
-      path:'login',
-      Component:Logi
-    }
+{
+  path:'logi',
+  Component:Logi
+},
+
+{
+ path:'register',
+ Component:Register
+
+}
+
+   
   
   ]
 }

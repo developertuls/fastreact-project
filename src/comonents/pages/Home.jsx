@@ -1,10 +1,11 @@
 import Herosection from "./Herosection"
 
 
+
 const Home = () => {
   return (
     <div>
-      <Herosection></Herosection>
+   <Herosection></Herosection>
     </div>
   )
 }
