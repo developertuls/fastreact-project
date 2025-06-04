@@ -41,7 +41,7 @@ setActive(path)
 <nav className=" bg-green-600 text-white py-6 md:py-7  sticky top-0 z-10 ">
 <div className="flex justify-between items-center container mx-auto">
    <span className='block text-[#18dcff] text-2xl font-bold'><FaReact /></span>
- <h3 className='items-center md:ml-[-81px] text-lg'> <span className='text-2xl md:text-3xl font-bold'>R</span>eactProject</h3>
+ <h3 className='flex items-center md:ml-[-81px] text-lg'> <span className='flex items-center text-2xl md:text-3xl font-bold'>R</span>eactProject</h3>
   {/* ============== mobileMenu ============ */}
   <div className="md:hidden ml-auto">
     <button onClick={togoole}>
@@ -88,8 +88,11 @@ setActive(path)
       orderPage
       </Link></li>
   </ul>
-<Link to={'/logi'}>
-  <button className="hidden md:block font-medium hover:bg-yellow-200 bg-white text-black px-3 py-1 rounded-lg">Login</button>
+<Link to={'/logi'}
+onClick={()=>activeLink('/logi')}
+>
+  {/* "hidden md:block font-medium hover:bg-yellow-200 bg-white text-black px-3 py-1 rounded-lg" */}
+  <button className={`${active=== '/logi' ?'bg-yellow-200 rounded-lg text-black px-3 py-1 font-medium':'hidden md:block font-medium hover:bg-yellow-200 bg-white text-black px-3 py-1 rounded-lg'}`}>Login</button>
 </Link>
 
   {/* =======================mobilecolasp============= */}
