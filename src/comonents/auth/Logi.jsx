@@ -8,11 +8,11 @@ import { IoLogoGithub } from "react-icons/io5";
 
 export const Logi = () => {
   return (
-<div className="flex items-center justify-center h-[150vh] px-4 bg-green-900">
-<div  className="mb-6 mt-5  bg-white  flex flex-col  p-8  max-w-sm ">
+<div className="flex items-center justify-center  h-[190vh]   px-4 bg-green-900">
+<div  className="bg-white  flex flex-col  p-8  max-w-sm ">
   <h2 className="text-green-500 text-center text-lg font-bold mb-5">Login</h2>
   <form className="space-y-3">
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email "  placeholder="Email" />
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email "  placeholder="Email"  />
   
     <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type="password"  placeholder="password"/>
 
@@ -44,7 +44,12 @@ Login with GitHub<IoLogoGithub  className=" rounded-lg ml-1"/>
 
 <div className=" text-center mt-5 text-sm">
   <p>
-    Don't have an account?<Link to={'/register'} className="hover:underline 
+    Don't have an account?<Link to={'/register'} 
+    
+    
+     
+     
+    className="hover:underline 
      text-green-600 font-semibold">RegisterHere</Link>
     </p>
 </div>

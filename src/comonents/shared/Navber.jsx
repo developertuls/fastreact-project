@@ -38,9 +38,9 @@ setActive(path)
 
   return (
 
-<nav className=" bg-green-600 text-white py-6 md:py-7  sticky top-0 z-10 ">
+<nav className=" bg-black/40 text-white py-6 md:py-7 fixed w-full top-0  ">
 <div className="flex justify-between items-center container mx-auto">
-   <span className='block text-[#18dcff] text-2xl font-bold'><FaReact /></span>
+   <span className='block text-[#18dcff] text-2xl font-bold'><FaReact  className="cursor-pointer hover:text-[#25CCF7]"/></span>
  <h3 className='flex items-center md:ml-[-81px] text-lg'> <span className='flex items-center text-2xl md:text-3xl font-bold'>R</span>eactProject</h3>
   {/* ============== mobileMenu ============ */}
   <div className="md:hidden ml-auto">
@@ -56,7 +56,7 @@ setActive(path)
     <li> <Link 
     to={'/'} 
   onClick={()=>activeLink('/')}
-    className={`${active=== '/' ?'text-red-500':'hover:bg-black rounded-lg p-[3px]'}`}>
+    className={`${active=== '/' ?'text-red-500':' rounded-lg  hover:text-black'}`}>
       
       Home
     </Link>
@@ -64,7 +64,7 @@ setActive(path)
     <li><Link
      to={'/about'}
   onClick={()=>activeLink('/about')}
-      className={`${active=== '/about' ?'text-[#000]':'hover:bg-black rounded-lg p-[3px]'}`} >
+      className={`${active=== '/about' ?'text-[#000]':' rounded-lg  hover:text-black'}`} >
 
       About
       </Link></li>
@@ -72,28 +72,33 @@ setActive(path)
     <li><Link 
     to={'/contact'} 
    onClick={()=>activeLink('/contact')}
-    className={`${active=== '/contact' ?'text-red-500':'hover:bg-black rounded-lg p-[3px]'}`} >
+    className={`${active=== '/contact' ?'text-red-500':' rounded-lg  hover:text-black'}`} >
       contact
       </Link></li>
     <li><Link 
     to={'/blogs'} 
     onClick={()=>activeLink('/')}
-    className={`${active=== '/blogs' ?'text-red-600':'hover:bg-black rounded-lg p-[3px]'}`} >
+    className={`${active=== '/blogs' ?'text-red-600':' rounded-lg hover:text-black'}`} >
       blogs
       </Link></li>
     <li><Link 
     to={'/orderpage'} 
       onClick={()=>activeLink('/orderpage')}
-    className={`${active=== '/orderpage' ?'text-red-500':'hover:bg-black rounded-lg p-[3px]'}`} >
+    className={`${active=== '/orderpage' ?'text-red-500':' hover:text-black '}`} >
       orderPage
       </Link></li>
   </ul>
 <Link to={'/logi'}
 onClick={()=>activeLink('/logi')}
 >
-  {/* "hidden md:block font-medium hover:bg-yellow-200 bg-white text-black px-3 py-1 rounded-lg" */}
+ 
+
+
   <button className={`${active=== '/logi' ?'bg-yellow-200 rounded-lg text-black px-3 py-1 font-medium':'hidden md:block font-medium hover:bg-yellow-200 bg-white text-black px-3 py-1 rounded-lg'}`}>Login</button>
 </Link>
+
+
+
 
   {/* =======================mobilecolasp============= */}
   <div className={`md:hidden w-full  absolute bg-green-600 top-full left-0 ${isOpen?'block':'hidden'}`}>

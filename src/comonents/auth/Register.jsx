@@ -1,20 +1,74 @@
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoGithub } from "react-icons/io5";
+import { LuEyeClosed } from "react-icons/lu";
+import { VscEyeClosed } from "react-icons/vsc";
+import { useState } from "react";
+
+
+
 
 export const Register = () => {
+
+
+// ==============funtiongelary=========
+
+
+
+
+
+const [passshow,setPassshow]=useState(false)
+const [Confrimpassshow,setConfrimpassshow]=useState(false)
+
+
+
+
+
+
+
+
+
   return (
 
 
-<div className="flex items-center justify-center h-[170vh] px-4 bg-blue-300">
+<div className="flex items-center justify-center h-[205vh] px-4 bg-blue-300">
 <div  className="mb-6 mt-5  bg-white  flex flex-col  p-8  max-w-lg ">
   <h2 className="text-green-500 text-center text-lg font-bold mb-5 ">Register</h2>
   <form className="space-y-3">
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="text "  placeholder="Full name" />
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email "  placeholder="Email" />
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="text "  placeholder="Full name" required/>
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email "  placeholder="Email" required />
   
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type="password"  placeholder="password"/>
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type="password"  placeholder="Confirm Password"/>
+
+  {/* ====================onlypassword============== */}
+  <div className="flex relative items-center">
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type={passshow ? 'text':'password'}  placeholder="password" required/>
+
+   <LuEyeClosed onClick={()=>setPassshow(!passshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/> 
+
+{
+  passshow ? <VscEyeClosed onClick={()=>setPassshow(!passshow)}  className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/>:  <LuEyeClosed onClick={()=>setPassshow(!passshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/> 
+}
+
+</div>
+
+
+    {/* =========onlyCfirmPasswrd====== */}
+     <div className="flex relative items-center">
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  
+    focus:ring-2 focus:ring-green-500 focus:outline-none " type={Confrimpassshow?'text':'password'
+    } placeholder="Confirm Password" required/>
+
+  <LuEyeClosed onClick={()=>setConfrimpassshow(!Confrimpassshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/> 
+
+{
+ Confrimpassshow ? <VscEyeClosed onClick={()=>setConfrimpassshow(!Confrimpassshow)}  className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/>:  <LuEyeClosed onClick={()=>setConfrimpassshow(!Confrimpassshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/> 
+}
+
+
+
+
+</div>
+
 
 
 <div className="flex  items-center justify-between">
@@ -22,6 +76,7 @@ export const Register = () => {
   <input type="checkbox" 
   name=""
    id="checkbox"
+   required
     />
     <label htmlFor="checkbox" className="text-sm">Accept terms <Link className="text-green-600 cursor-pointer">conditions</Link> </label>
 </p>
@@ -33,7 +88,7 @@ export const Register = () => {
 
 
 
-    <button className=" cursor-pointer transition w-full  hover:bg-green-500 bg-green-600  py-1 rounded-sm text-white" type="submit">Register</button>
+ <button className=" cursor-pointer transition w-full  hover:bg-green-500 bg-green-600  py-1 rounded-sm text-white" type="submit">Register</button>
 
 
   </form>
@@ -56,9 +111,13 @@ Register with GitHub<IoLogoGithub  className=" rounded-lg ml-1"/>
 
 <div className=" text-center mt-5 text-sm">
   <p>
-    Already have an account?<Link to={'/logi'} className="hover:underline 
+    Already have an account?<Link to={'/logi'} 
+   
+    className="hover:underline 
      text-green-600 font-semibold">Login now</Link>
     </p>
+
+
 </div>
 
 

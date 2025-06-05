@@ -3,7 +3,7 @@
 
 const Herosection = () => {
   return (
-    <div  className='h-[80vh] flex flex-col justify-center text-white items-center px-5' style={{
+    <div  className='h-[100vh] flex flex-col justify-center text-white items-center px-5' style={{
         backgroundImage:"url('/src/assets/Best.jpg')",
         backgroundSize:'cover',
         backgroundPosition:'center'
