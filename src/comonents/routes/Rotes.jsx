@@ -14,7 +14,7 @@ import { Register } from "../auth/Register";
 
 
 
-
+//===============All pathuse===================
 
  const router=createBrowserRouter([
 

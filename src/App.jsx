@@ -11,12 +11,6 @@ import Rot from './comonents/layout/Rot'
 function App() {
 
 
-
-
-
-
-
-
   return (
     
    
