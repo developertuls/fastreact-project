@@ -16,7 +16,7 @@ import { GithubAuthProvider } from "firebase/auth";
 export const Register = () => {
 
 const [user,setUser]=useState(null)
-console.log(user);
+
 
 
 // ==============funtiongelary=========
@@ -65,7 +65,7 @@ const auth = getAuth()
 
 signInWithPopup(auth, provider)
 .then(result=>{
-
+console.log(result.user)
 }).catch(error=>{
   console.log(error)
 })
@@ -80,7 +80,7 @@ const RegisteFaceboolBtn=()=>{
   const auth = getAuth();
   signInWithPopup(auth, provider)
   .then(result=>{
-console.log(result)
+
   }).catch(error=>{
     console.log(error)
   })
@@ -184,7 +184,7 @@ Register with GitHub<IoLogoGithub  className=" rounded-lg ml-1"/>
 
 {/* =================FacebookRegisterBtn=============== */}
 <button onClick={RegisteFaceboolBtn} className="flex items-center justify-center  hover:bg-slate-900 bg-gray-700 py-1 px-2 rounded-sm cursor-pointer">
-Register with GitHub<FaFacebookSquare   className=" rounded-lg ml-1 bg-blue-600"/>
+Register with Facebook<FaFacebookSquare   className=" rounded-lg ml-1 bg-blue-600"/>
  </button>
 </div>
 
