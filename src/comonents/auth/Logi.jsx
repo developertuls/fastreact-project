@@ -2,14 +2,32 @@
 import { Link } from "react-router-dom"
 import { FcGoogle } from "react-icons/fc";
 import { IoLogoGithub } from "react-icons/io5";
+import { motion } from "motion/react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { app } from "../../firebase/Firebase.config";
 
 
 
 
 export const Logi = () => {
 
-const register=()=>{
-  console.log('op')
+const login=(e)=>{
+ e.preventDefault()
+
+
+   const email= e.target.email.value;
+  const password= e.target.password.value;
+ 
+
+
+const auth = getAuth();
+signInWithEmailAndPassword(auth, email, password)
+.then(Result=>{
+console.log(Result.user)
+  
+}).catch(error=>{
+  console.log(error)
+})
 }
 
 
@@ -19,12 +37,19 @@ const register=()=>{
 
   return (
 <div className="flex items-center justify-center  h-[190vh]   px-4 bg-green-900">
-<div  className="bg-white  flex flex-col  p-8  max-w-sm ">
-  <h2 className="text-green-500 text-center text-lg font-bold mb-5">Login</h2>
-  <form className="space-y-3">
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email "  placeholder="Email"  />
+<motion.div 
+
   
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type="password"  placeholder="password"/>
+     initial={{opacity:0,scale:0,translateX:"100%"}}
+     animate={{opacity:1,scale:1,translateX:0}}
+     transition={{duration:0.8,delay:0.25}}
+
+className="bg-white  flex flex-col  p-8  max-w-sm ">
+  <h2 className="text-green-500 text-center text-lg font-bold mb-5">Login</h2>
+  <form onSubmit={login} className="space-y-3">
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email " name="email"  placeholder="Email"  />
+  
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type="password" name="password" placeholder="password"/>
 
 <p className="text-right hover:text-green-400 cursor-pointer hover:underline">
   For gotPasswrd
@@ -68,7 +93,7 @@ Login with GitHub<IoLogoGithub  className=" rounded-lg ml-1"/>
 <div className=" text-center mt-5 text-sm">
   <p>
     Don't have an account?<Link to={'/register'}
-    onClick={register}
+ 
      className="hover:underline 
    text-green-600 font-semibold">RegisterHere</Link>
 </p>
@@ -81,7 +106,7 @@ Login with GitHub<IoLogoGithub  className=" rounded-lg ml-1"/>
 
 
 
-</div>
+</motion.div>
 </div>
   )
 }

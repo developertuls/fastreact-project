@@ -5,50 +5,67 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { LuEyeClosed } from "react-icons/lu";
 import { VscEyeClosed } from "react-icons/vsc";
 import { useState } from "react";
-import { GoogleAuthProvider,getAuth,signInWithPopup ,signOut, FacebookAuthProvider  } from "firebase/auth";
+import {createUserWithEmailAndPassword , GoogleAuthProvider,getAuth,signInWithPopup ,signOut, FacebookAuthProvider ,updateProfile } from "firebase/auth";
 import { app } from "../../firebase/Firebase.config";
 import { GithubAuthProvider } from "firebase/auth";
+import { motion } from "motion/react";
 
 
-
+  
 
 
 export const Register = () => {
 
-const [user,setUser]=useState(null)
-
-
-
-// ==============funtiongelary=========
+//==============funtiongelary=========//
+const [user,setUser]=useState('')
 const [passshow,setPassshow]=useState(false)
 const [Confrimpassshow,setConfrimpassshow]=useState(false)
 
 
+
 const heandeleRegister=(e)=>{
   e.preventDefault()
- const auth= getAuth(app)
-const provider = new GoogleAuthProvider();
-signInWithPopup(auth,provider)
-.then(result=>{
- const userinfo= result.user;
- setUser(userinfo)
+  const name= e.target.UserName.value;
+  const password= e.target.password.value;
+  const email= e.target.email.value;
+  const confrimPassword=e.target.confirmPassword.value;
+   
+
+  const auth= getAuth(app)
+  createUserWithEmailAndPassword(auth, email, password)
+  .then(result=>{
+  const user=result.user;
+   updateProfile(user,{
+    displayName:name
+   })
+
+   .then(()=>{
+    setUser(user);
+   })
+   .catch(error=>{
+    console.log(error)
+   })
+ 
+   
+   
   
+
+ 
+
+
 })
-  
 
-
-  // const fullname= e.target.name.value;
-  // const password= e.target.password.value;
-  // const email= e.target.email.value;
-  // const confrimPassword=e.target.confirmPassword.value;
 }
+
+
+
 
 const signOutbtn=()=>{
 const auth=getAuth()
 signOut(auth)
 .then(result=>{
 
-  setUser(null);
+setUser(null);
 
 })
 .catch(error=>{
@@ -58,11 +75,22 @@ signOut(auth)
 
 
 
+const resgisterGoogleBtn=()=>{
+const provider = new GoogleAuthProvider();
+const auth=getAuth()
+signInWithPopup(auth,provider)
+.then(result=>{
+  console.log(result.user)
+})
+
+
+}
+
+
 
 const githubBtn=()=>{
 const provider = new GithubAuthProvider();
 const auth = getAuth()
-
 signInWithPopup(auth, provider)
 .then(result=>{
 console.log(result.user)
@@ -80,6 +108,7 @@ const RegisteFaceboolBtn=()=>{
   const auth = getAuth();
   signInWithPopup(auth, provider)
   .then(result=>{
+console.log(result.user)
 
   }).catch(error=>{
     console.log(error)
@@ -92,14 +121,27 @@ const RegisteFaceboolBtn=()=>{
   return (
 
 
-<div className="flex items-center justify-center h-[205vh] px-4 bg-blue-300">
-<div  className="mb-6 mt-5  bg-white  flex flex-col  p-8  max-w-lg ">
+<motion.div
+
+
+
+
+
+
+className="flex items-center justify-center h-[205vh] px-4 bg-blue-300">
+<motion.div 
+animate={{opacity:1,scale:1}}
+ initial={{opacity:0,scale:0.5}}
+ transition={{duration:0.8,delay:0.28}}
+ className="mb-6 mt-5  bg-white  flex flex-col  p-8  max-w-lg ">
 <h2 className="text-green-500 text-center text-lg font-bold mb-5 ">Register</h2>
-<form  className="space-y-3">
+<motion.form  onSubmit={heandeleRegister}
+
+className="space-y-3">
 
 {/* ==========name========== */}
     <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 
-      focus:outline-none focus:ring-2 focus:ring-green-500" type="text " name="name" 
+      focus:outline-none focus:ring-2 focus:ring-green-500" type="text " name="UserName" 
        placeholder="Full name" required/>
 
 {/* ========================Email================== */}
@@ -145,7 +187,7 @@ const RegisteFaceboolBtn=()=>{
    id="checkbox"
    required
     />
-    <label htmlFor="checkbox" className="text-sm">Accept terms <Link className="text-green-600 cursor-pointer">conditions</Link> </label>
+    <label htmlFor="checkbox" className="text-sm">Accept terms<Link to={'/condition'} className="text-green-600 cursor-pointer">conditions</Link> </label>
 </p>
 
   <p className="text-sm text-right hover:text-green-400 cursor-pointer hover:underline">
@@ -158,7 +200,7 @@ const RegisteFaceboolBtn=()=>{
  <button className=" cursor-pointer transition w-full  hover:bg-green-500 bg-green-600  py-1 rounded-sm text-white" type="submit">Register</button>
 
 
-  </form>
+  </motion.form>
 
   {/* ==divider======== */}
   <div className="flex  items-center my-6">
@@ -173,14 +215,15 @@ const RegisteFaceboolBtn=()=>{
 
   {/* ==================RegisterGoogleBtn=================== */}
 {
-user?<button onClick={signOutbtn} className= "flex items-center justify-center    hover:bg-red-600 bg-red-500 py-1 px-2 rounded-sm cursor-pointer">signOut</button>:<button onClick={heandeleRegister} className= "flex items-center justify-center    hover:bg-red-600 bg-red-500 py-1 px-2 rounded-sm cursor-pointer">Register with google<FcGoogle className="bg-white rounded-lg ml-1"/>
+user?<button onClick={signOutbtn} className= "flex items-center justify-center    hover:bg-red-600 bg-red-500 py-1 px-2 rounded-sm cursor-pointer">signOut</button>:<button onClick={resgisterGoogleBtn} className= "flex items-center justify-center    hover:bg-red-600 bg-red-500 py-1 px-2 rounded-sm cursor-pointer">Register with google<FcGoogle className="bg-white rounded-lg ml-1"/>
 </button>
 }
 
 {/* =====================githbRegisterubBtn====================== */}
-<button onClick={githubBtn} className="flex items-center justify-center    hover:bg-slate-900 bg-gray-700 py-1 px-2 rounded-sm cursor-pointer">
+<motion.button 
+  onClick={githubBtn} className="flex items-center justify-center    hover:bg-slate-900 bg-gray-700 py-1 px-2 rounded-sm cursor-pointer">
 Register with GitHub<IoLogoGithub  className=" rounded-lg ml-1"/>
- </button>
+ </motion.button>
 
 {/* =================FacebookRegisterBtn=============== */}
 <button onClick={RegisteFaceboolBtn} className="flex items-center justify-center  hover:bg-slate-900 bg-gray-700 py-1 px-2 rounded-sm cursor-pointer">
@@ -200,22 +243,18 @@ Register with Facebook<FaFacebookSquare   className=" rounded-lg ml-1 bg-blue-60
 </div>
 
 
-
-
-{user &&
-  
-<div>
-
-<h2>{user.displayName}</h2>
-<h2>{user.email}</h2>
-<img src={user.photoURL} alt="rt" />
-
+{
+  <div>
+  <h1>userName:{user.displayName}</h1>
+  <h1>userE-mail:{user.email}</h1>
 </div>
 }
 
 
-</div>
-</div>
+
+
+</motion.div>
+</motion.div>
 
 
   )

@@ -7,6 +7,9 @@ import './index.css' // <-- Tailwind import
 
 import { RouterProvider } from 'react-router-dom'
 import router from './comonents/routes/Rotes.jsx'
+import Profilecontext from './comonents/context/Profilecontext.jsx'
+
+
 
 
 
@@ -19,11 +22,9 @@ import router from './comonents/routes/Rotes.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
 
-<RouterProvider router={router}>
-<App/>
-</RouterProvider>
-
-
+ <Profilecontext>
+  <RouterProvider router={router}/>
+ </Profilecontext>
 
 
 

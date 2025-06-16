@@ -10,6 +10,7 @@ import { Blogs } from "../pages/Blogs";
 import Orderpeg from '../pages/Orderpeg';
 import { Logi } from "../auth/Logi";
 import { Register } from "../auth/Register";
+import conditionpage from "../pages/conditionpage";
 
 
 
@@ -53,6 +54,10 @@ import { Register } from "../auth/Register";
  path:'register',
  Component:Register
 
+},
+{
+  path:'condition',
+  Component:conditionpage
 }
 
    

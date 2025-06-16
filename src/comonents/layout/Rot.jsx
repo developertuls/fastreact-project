@@ -12,8 +12,7 @@ const Rot = () => {
     <div>
     <Navber></Navber>
     <Outlet></Outlet>
-       <Fotet></Fotet>
-       
+      <Fotet></Fotet>
     </div>
   )
 }

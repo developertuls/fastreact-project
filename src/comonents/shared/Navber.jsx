@@ -40,8 +40,8 @@ setActive(path)
 
 <nav className=" bg-black/40 text-white py-6 md:py-7 fixed w-full top-0  ">
 <div className="flex justify-between items-center container mx-auto">
-   <span className='block text-[#18dcff] text-2xl font-bold'><FaReact  className="cursor-pointer hover:text-[#25CCF7]"/></span>
- <h3 className='flex items-center md:ml-[-81px] text-lg'> <span className='flex items-center text-2xl md:text-3xl font-bold'>R</span>eactProject</h3>
+   <span className='block text-[#18dcff] text-2xl font-bold'><Link to={'/'}><FaReact  className="cursor-pointer hover:text-[#25CCF7]"/></Link> </span>
+ <h3 className='flex items-center md:ml-[-81px] text-lg'> <span className='flex items-center text-2xl md:text-3xl font-bold'>R</span>EACTPROJECT</h3>
   {/* ============== mobileMenu ============ */}
   <div className="md:hidden ml-auto">
 
