@@ -12,7 +12,7 @@ export const Blogs = () => {
       
         backgroundPosition:'center'
     }}>Blogs
-    
+    h2
     </motion.div>
   )
 }
