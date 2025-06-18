@@ -4,11 +4,13 @@ import { IoLogoGithub } from "react-icons/io5";
 import { FaFacebookSquare } from "react-icons/fa";
 import { LuEyeClosed } from "react-icons/lu";
 import { VscEyeClosed } from "react-icons/vsc";
-import { useState } from "react";
-import {createUserWithEmailAndPassword , GoogleAuthProvider,getAuth,signInWithPopup ,signOut, FacebookAuthProvider ,updateProfile } from "firebase/auth";
+import { useContext, useRef, useState } from "react";
+import { GoogleAuthProvider,getAuth,signInWithPopup ,signOut, FacebookAuthProvider ,updateProfile } from "firebase/auth";
 import { app } from "../../firebase/Firebase.config";
 import { GithubAuthProvider } from "firebase/auth";
 import { motion } from "motion/react";
+import { Profilecreat } from "../context/Profilecontext";
+
 
 
   
@@ -17,6 +19,10 @@ import { motion } from "motion/react";
 export const Register = () => {
 
 //==============funtiongelary=========//
+const [errorMessage ,setErrorMessage]=useState('')
+const [successMessage ,setSuccessMessage]=useState('')
+const fromRef=useRef(null)
+const {registerUser,sevUserprfile}=useContext(Profilecreat)
 const [user,setUser]=useState('')
 const [passshow,setPassshow]=useState(false)
 const [Confrimpassshow,setConfrimpassshow]=useState(false)
@@ -25,25 +31,51 @@ const [Confrimpassshow,setConfrimpassshow]=useState(false)
 
 const heandeleRegister=(e)=>{
   e.preventDefault()
+  const form=fromRef.current;
   const name= e.target.UserName.value;
   const password= e.target.password.value;
   const email= e.target.email.value;
   const confrimPassword=e.target.confirmPassword.value;
-   
+  setSuccessMessage('') ;
+  setErrorMessage('')
+
+
+
+
+if(password!== confrimPassword){
+alert('Plssce password match!');
+return
+}
+else if(password.length<6|| confrimPassword.length<6){
+setErrorMessage('password should be at least 6 charrcters');
+return
+}
+
+
 
   const auth= getAuth(app)
-  createUserWithEmailAndPassword(auth, email, password)
+ registerUser( email, confrimPassword)
   .then(result=>{
   const user=result.user;
-   updateProfile(user,{
+
+  updateProfile(user,{
     displayName:name
+    
+  })
+  .then(()=>{
+    sevUserprfile({
+      name:user.displayName,
+      email:user.email,
+      uid:user.uid
+    })
+  })
+  setSuccessMessage('Your Registersuccess fulle')
+ form.reset();
    })
 
-   .then(()=>{
-    setUser(user);
-   })
+   
    .catch(error=>{
-    console.log(error)
+  setErrorMessage(error.message)
    })
  
    
@@ -53,7 +85,7 @@ const heandeleRegister=(e)=>{
  
 
 
-})
+
 
 }
 
@@ -135,7 +167,7 @@ animate={{opacity:1,scale:1}}
  transition={{duration:0.8,delay:0.28}}
  className="mb-6 mt-5  bg-white  flex flex-col  p-8  max-w-lg ">
 <h2 className="text-green-500 text-center text-lg font-bold mb-5 ">Register</h2>
-<motion.form  onSubmit={heandeleRegister}
+<motion.form  ref={fromRef} onSubmit={heandeleRegister}
 
 className="space-y-3">
 
@@ -157,6 +189,8 @@ className="space-y-3">
 {
   passshow ? <VscEyeClosed onClick={()=>setPassshow(!passshow)}  className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/>:  <LuEyeClosed onClick={()=>setPassshow(!passshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/> 
 }
+
+
 
 </div>
 
@@ -198,7 +232,13 @@ className="space-y-3">
 
 
  <button className=" cursor-pointer transition w-full  hover:bg-green-500 bg-green-600  py-1 rounded-sm text-white" type="submit">Register</button>
+ {
+  successMessage && <p className="bg-slate-30 rounded-full text-green-500 animate-bounce transition text-center">{successMessage}</p>
+ }
 
+{
+errorMessage &&   <p className="bg-slate-30 rounded-full text-red-600 animate-bounce transition text-center">{errorMessage}</p>
+}
 
   </motion.form>
 

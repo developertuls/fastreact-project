@@ -1,7 +1,10 @@
 
 import { motion } from "motion/react"
+import { useContext } from "react"
+import { Profilecreat } from "../context/Profilecontext"
 
 export const Blogs = () => {
+const {userrProfile}=useContext(Profilecreat)
   return (
     <motion.div 
       initial={{opacity:0,scale:0,translateY:"100%"}}
@@ -13,6 +16,13 @@ export const Blogs = () => {
         backgroundPosition:'center'
     }}>Blogs
     
+<div>
+  <h2>name:{userrProfile.name}</h2>
+  <h2>name:{userrProfile.email}</h2>
+  <h2>name:{userrProfile.uid}</h2>
+</div>
+
+
     </motion.div>
   )
 }
