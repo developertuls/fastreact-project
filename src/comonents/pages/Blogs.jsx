@@ -15,7 +15,7 @@ const {userrProfile}=useContext(Profilecreat)
       
         backgroundPosition:'center'
     }}>Blogs
-<<<<<<< HEAD
+
     
 <div>
   <h2>name:{userrProfile.name}</h2>
@@ -24,9 +24,8 @@ const {userrProfile}=useContext(Profilecreat)
 </div>
 
 
-=======
-    h2
->>>>>>> 70978fcdd4f19a0563d8546a85999732a24f3586
+  
+
     </motion.div>
   )
 }

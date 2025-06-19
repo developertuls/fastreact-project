@@ -27,6 +27,7 @@ const [user,setUser]=useState('')
 const [passshow,setPassshow]=useState(false)
 const [Confrimpassshow,setConfrimpassshow]=useState(false)
 
+const Passregex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
 
 
 const heandeleRegister=(e)=>{
@@ -50,7 +51,10 @@ else if(password.length<6|| confrimPassword.length<6){
 setErrorMessage('password should be at least 6 charrcters');
 return
 }
-
+if(!Passregex.test(confrimPassword)){
+setErrorMessage('Pless uppurcase,onelowercase leter,one number,specaile charcreter')
+return
+}
 
 
   const auth= getAuth(app)
@@ -62,13 +66,18 @@ return
     displayName:name
     
   })
+  
   .then(()=>{
     sevUserprfile({
       name:user.displayName,
       email:user.email,
       uid:user.uid
-    })
+    });
+
   })
+
+
+
   setSuccessMessage('Your Registersuccess fulle')
  form.reset();
    })
@@ -112,7 +121,13 @@ const provider = new GoogleAuthProvider();
 const auth=getAuth()
 signInWithPopup(auth,provider)
 .then(result=>{
-  console.log(result.user)
+  const user=result.user
+   sevUserprfile({
+      name:user.displayName,
+      email:user.email,
+      uid:user.uid
+    });
+     setSuccessMessage(`welcome, ${user.displayName}Your Register successfulle`); 
 })
 
 

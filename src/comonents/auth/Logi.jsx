@@ -4,29 +4,42 @@ import { FcGoogle } from "react-icons/fc";
 import { IoLogoGithub } from "react-icons/io5";
 import { motion } from "motion/react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { app } from "../../firebase/Firebase.config";
+import { useRef, useState } from "react";
+import { LuEyeClosed } from "react-icons/lu";
+import { VscEyeClosed } from "react-icons/vsc";
 
 
 
 
+// funtiongelary======================
 export const Logi = () => {
+const [passshow,setPassshow]=useState(false)
+const [errorMessage ,setErrorMessage]=useState('')
+const [successMessage ,setSuccessMessage]=useState('')
+const fromRef=useRef(null)
+
+
 
 const login=(e)=>{
- e.preventDefault()
-
-
-   const email= e.target.email.value;
-  const password= e.target.password.value;
+ e.preventDefault();
+  const form=fromRef.current;
+const email= e.target.email.value;
+const password= e.target.password.value;
  
 
 
 const auth = getAuth();
 signInWithEmailAndPassword(auth, email, password)
 .then(Result=>{
-console.log(Result.user)
+  const user=Result.user;
+setSuccessMessage('Your Login success')
+form.reset();
+setErrorMessage('')
   
+ 
 }).catch(error=>{
-  console.log(error)
+  setErrorMessage(error.message)
+   
 })
 }
 
@@ -46,17 +59,36 @@ console.log(Result.user)
 
 className="bg-white  flex flex-col  p-8  max-w-sm ">
   <h2 className="text-green-500 text-center text-lg font-bold mb-5">Login</h2>
-  <form onSubmit={login} className="space-y-3">
+  <form ref={fromRef}  onSubmit={login} className="space-y-3">
     <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5 focus:outline-none focus:ring-2 focus:ring-green-500" type="email " name="email"  placeholder="Email"  />
-  
-    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type="password" name="password" placeholder="password"/>
+  <div className="flex relative items-center max-w-xs">
+    <input className="w-full py-2 px-4 border rounded-sm  placeholder:px-5  focus:ring-2 focus:ring-green-500 focus:outline-none " type={passshow ?'text':'password'}  name="password" placeholder="password" required/>
+ <LuEyeClosed onClick={()=>setPassshow(!passshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/>
+  {
+    passshow ? <VscEyeClosed onClick={()=>setPassshow(!passshow)}  className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/>:  <LuEyeClosed onClick={()=>setPassshow(!passshow)} className="absolute right-3 text-gray-300 cursor-pointer hover:text-red-400"/> 
+  } 
+
+
+
+
+  </div>
+
+
+
 
 <p className="text-right hover:text-green-400 cursor-pointer hover:underline">
   For gotPasswrd
 </p>
 
 
-    <button className=" cursor-pointer transition w-full  hover:bg-green-500 bg-green-600  py-1 rounded-sm text-white" type="submit">Login</button>
+<button className=" cursor-pointer transition w-full  hover:bg-green-500 bg-green-600  py-1 rounded-sm text-white" type="submit">Login</button>
+     {
+  successMessage && <p className="bg-slate-30 rounded-full text-green-500 animate-bounce transition text-center">{successMessage}</p>
+ }
+
+{
+errorMessage &&   <p className="bg-slate-30 rounded-full text-red-600 animate-bounce transition text-center">{errorMessage}</p>
+}
 
 
   </form>
