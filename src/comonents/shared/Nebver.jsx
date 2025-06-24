@@ -14,7 +14,6 @@ const Nebver = () => {
     // ====hoksgelary=============//
 
 const [isopen,setIsopen]=useState(false);
-const [btncolor,setBtncolor]=useState(false)
 const [activelink,setActivelink]=useState()
 
 
@@ -23,10 +22,6 @@ const [activelink,setActivelink]=useState()
 // ======funtiongelary========//
 const togglemenu=()=>{
 setIsopen(!isopen)
-}
-
-const btncolorsho=()=>{
-setBtncolor(!btncolor)
 }
 
 
@@ -73,7 +68,51 @@ setActivelink(path)
 <ul className='fontul hidden md:flex  gap-6 md:gap-7 mx-auto transition'>
    
 <li> <Link to={'/'} className={`${activelink==='/' ? 'text-[#4cd137]'
- :'text-[#4cd137]'}`}
+ :'text-[#ff4757]'}`}
+ onClick={()=>activelinkcolor('/')}>
+  Home
+  </Link></li>
+
+<li> <Link to={'/shop'} className={`${activelink=== '/shop' ? 'text-[#4cd137]'
+:'hover:text-[#4cd137]'}`}
+ onClick={()=>activelinkcolor('/shop')}>
+  Shop
+  </Link></li>
+
+<li> <Link to={'/aboutus'} className={`${activelink==='/aboutus' ? 'text-[#4cd137]'
+ :'hover:text-[#4cd137]'}`}
+ onClick={()=>activelinkcolor('/aboutus')}>
+  About Us
+  </Link></li>
+
+
+<li> <Link to={'/blogs'} className={`${activelink==='/blogs'? 'text-[#4cd137]'
+: 'hover:text-[#4cd137]'}`}
+onClick={()=>activelinkcolor('/blogs')}>
+  Blogs
+  </Link></li>
+
+
+    </ul>
+
+
+<Link to={'/contactus'}>
+<button
+ onClick={()=>activelinkcolor('/contactus')} className={`${activelink=== '/contactus'?'bg-[#4cd137]':'bg-[#cdfe2a]   hover:bg-[#a1c138]'}
+  fontbtn bg-[#a8cf26] hidden md:block  text-black font-medium px-2 py-1 rounded-sm  transition`}>
+  contact Us
+  </button>
+
+</Link>
+</div>
+
+
+
+{/* mobilemenucollapsed */}
+<div className={`mx-auto justify-center items-center md:hidden w-full absolute bg-[#0c0e12] top-full left-0 ${isopen?'transition-all block':'hidden'} `}>
+  <ul className='flex flex-col items-center'>
+   <li> <Link to={'/'} className={`${activelink==='/' ? 'text-[#4cd137]'
+ :'text-[#ff4757]'}`}
  onClick={()=>activelinkcolor('/')}>
   Home
   </Link></li>
@@ -95,33 +134,17 @@ setActivelink(path)
 : 'hover:text-[#4cd137]'}`}
 onClick={()=>activelinkcolor('/blogs')}>
   Blogs
-  </Link></li>
+  </Link></li>     
 
 
-    </ul>
 
-    
-<Link to={'/contactus'}>
-<button
- onClick={btncolorsho} className={`${btncolor?'bg-[#cdfe2a]':'hover:bg-[#a1c138]'}
-  fontbtn bg-[#a8cf26] hidden md:block  text-black font-medium px-2 py-1 rounded-sm  transition`}>
+ <Link><button
+ onClick={()=>activelinkcolor('/contactus')} className={`${activelink=== '/contactus'?'bg-[#cdfe2a]':'hover:bg-[#a1c138]'}
+  fontbtn bg-[#a8cf26] mb-5 mt-3 text-black font-medium px-2 py-1 rounded-sm  transition`}>
   contact Us
   </button>
 
 </Link>
-</div>
-
-
-
-{/* mobilemenucollapsed */}
-<div className={`mx-auto justify-center items-center md:hidden w-full absolute bg-[#0c0e12] top-full left-0 ${isopen?'transition-all block':'hidden'} `}>
-  <ul className='flex flex-col items-center'>
-         <li> <Link to={'/'} onClick={activelinkcolor}>Home</Link></li>
-         <li> <Link to={'/shop'}>shop</Link></li>
-         <li> <Link to={'/aboutus'}>About Us</Link></li>
-         <li> <Link to={'/blogs'}>Blog</Link></li>
-        
-        <li><button className='mb-5 mt-3 bg-[#c4f131] text-black font-medium px-2 py-1 rounded-sm hover:bg-[#a1c138] transition'><Link to={'/contactus'}>contact Us</Link></button></li>
        
     </ul> 
 
