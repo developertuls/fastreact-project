@@ -15,7 +15,7 @@ const Nebver = () => {
 
 const [isopen,setIsopen]=useState(false);
 const [btncolor,setBtncolor]=useState(false)
-
+const [activelink,setActivelink]=useState()
 
 
 
@@ -30,6 +30,21 @@ setBtncolor(!btncolor)
 }
 
 
+const activelinkcolor=(path)=>{
+setActivelink(path)
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   return (
@@ -41,7 +56,7 @@ setBtncolor(!btncolor)
 
 {/*=======logo=========*/}
  <div className='logo mx-auto md:ml-0 flex space-x-3 sm:space-x-1 items-center'><h1><Link to={'logo'}><FaCarTunnel className='text-[#c4f131] text-[25px] '/></Link></h1>
-<h2>LUXU<span className='logo'>RyZiP</span></h2></div>
+<h2>LUXU<span className='logo'>RyziP</span></h2></div>
 
 
 {/* mobile menu button */}
@@ -55,28 +70,53 @@ setBtncolor(!btncolor)
 
 
 
-
-    <ul className='hidden md:flex  gap-6 md:gap-7 mx-auto bg-blue-300'>
+<ul className='fontul hidden md:flex  gap-6 md:gap-7 mx-auto transition'>
    
-         <li> <Link to={'/'}>Home</Link></li>
-         <li> <Link to={'/shop'}>shop</Link></li>
-         <li> <Link to={'/aboutus'}>About Us</Link></li>
-         <li> <Link to={'blogs'}>Blog</Link></li>
-        
-      
-       
+<li> <Link to={'/'} className={`${activelink==='/' ? 'text-[#4cd137]'
+ :'text-[#4cd137]'}`}
+ onClick={()=>activelinkcolor('/')}>
+  Home
+  </Link></li>
+
+<li> <Link to={'/shop'} className={`${activelink=== '/shop' ? 'text-[#4cd137]'
+:'hover:text-[#4cd137]'}`}
+ onClick={()=>activelinkcolor('/shop')}>
+  shop
+  </Link></li>
+
+<li> <Link to={'/aboutus'} className={`${activelink==='/aboutus' ? 'text-[#4cd137]'
+ :'hover:text-[#4cd137]'}`}
+ onClick={()=>activelinkcolor('/aboutus')}>
+  About Us
+  </Link></li>
+
+
+<li> <Link to={'/blogs'} className={`${activelink==='/blogs'? 'text-[#4cd137]'
+: 'hover:text-[#4cd137]'}`}
+onClick={()=>activelinkcolor('/blogs')}>
+  Blogs
+  </Link></li>
+
 
     </ul>
+
+    
 <Link to={'/contactus'}>
-<button onClick={btncolorsho} className={`${btncolor?'bg-[#cdfe2a]':'hover:bg-[#a1c138]'} bg-[#a8cf26] hidden md:block  text-black font-medium px-2 py-1 rounded-sm  transition`}>contact Us</button>
+<button
+ onClick={btncolorsho} className={`${btncolor?'bg-[#cdfe2a]':'hover:bg-[#a1c138]'}
+  fontbtn bg-[#a8cf26] hidden md:block  text-black font-medium px-2 py-1 rounded-sm  transition`}>
+  contact Us
+  </button>
 
 </Link>
 </div>
 
+
+
 {/* mobilemenucollapsed */}
 <div className={`mx-auto justify-center items-center md:hidden w-full absolute bg-[#0c0e12] top-full left-0 ${isopen?'transition-all block':'hidden'} `}>
   <ul className='flex flex-col items-center'>
-         <li> <Link to={'/'}>Home</Link></li>
+         <li> <Link to={'/'} onClick={activelinkcolor}>Home</Link></li>
          <li> <Link to={'/shop'}>shop</Link></li>
          <li> <Link to={'/aboutus'}>About Us</Link></li>
          <li> <Link to={'/blogs'}>Blog</Link></li>

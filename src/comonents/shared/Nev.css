@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 .logo{
     font-family: "Bruno Ace SC", sans-serif;
+}
+
+.fontbtn{
+     font-family: "Saira", sans-serif;
+ 
+}
+.fontul{
+     font-family: "Saira", sans-serif;
+ 
 }
