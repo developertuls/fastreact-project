@@ -1,13 +1,19 @@
 
-import React from 'react'
+
 import Nebver from '../comonents/shared/Nebver'
 import { Outlet } from 'react-router-dom'
+import Footer from '../pages/Foter'
+
+
+
+
 
 export const Rot = () => {
   return (
-    <div>
+    <div className=''>
         <Nebver/>
-          <Outlet/>
+        <Outlet/>
+        <Footer/>
     </div>
   )
 }

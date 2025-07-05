@@ -4,3 +4,45 @@
   padding: 2rem;
    text-align: center; 
 } */
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-rotate-car {
+    animation: rotateCar 12s linear infinite;
+  }
+
+  @keyframes rotateCar {
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(360deg);
+    };
+   50% {
+transform: scale(3);
+    };
+   20% {
+transform: rotateX(370deg);
+    }
+  }
+}
+
+.absolute{
+   line-height: 35px;
+   font-family:"Bruno Ace SC", sans-serif ;
+}
+
+body{
+  overflow-x: hidden;  
+background:#130f40 ;
+}
+
+.logo{
+   font-family: "Bruno Ace SC", sans-serif ;
+}
+

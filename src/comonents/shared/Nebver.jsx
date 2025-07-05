@@ -45,12 +45,12 @@ setActivelink(path)
   return (
 
 //==============nevbercreat============= /// 
-<nav className='bg-[#0c0e12]  text-white relative'>
+<nav className='bg-[#1f2635]/90  text-[#d4dee4]  fixed top-0 w-full z-10 '>
 <div className='container mx-auto flex justify-between items-center py-5 md:py-6 '>
 
 
 {/*=======logo=========*/}
- <div className='logo mx-auto md:ml-0 flex space-x-3 sm:space-x-1 items-center'><h1><Link to={'logo'}><FaCarTunnel className='text-[#c4f131] text-[25px] '/></Link></h1>
+ <div className='font-bold  text-white logo mx-auto md:ml-0 flex space-x-3 sm:space-x-1 items-center'><h1><Link to={'logo'}><FaCarTunnel className='text-[#c4f131] text-[25px] '/></Link></h1>
 <h2>LUXU<span className='logo'>RyziP</span></h2></div>
 
 
@@ -98,8 +98,8 @@ onClick={()=>activelinkcolor('/blogs')}>
 
 <Link to={'/contactus'}>
 <button
- onClick={()=>activelinkcolor('/contactus')} className={`${activelink=== '/contactus'?'bg-[#4cd137]':'bg-[#cdfe2a]   hover:bg-[#a1c138]'}
-  fontbtn bg-[#a8cf26] hidden md:block  text-black font-medium px-2 py-1 rounded-sm  transition`}>
+ onClick={()=>activelinkcolor('/contactus')} className={`${activelink=== '/contactus' ? 'bg-[#cdfe2a] ' :'bg-[#cdfe2a]   hover:bg-[#a1c138]'}
+  fontbtn  bg-[#a8cf26] hidden md:block  text-black font-medium px-2 py-1 rounded-sm  transition`}>
   contact Us
   </button>
 
