@@ -14,6 +14,7 @@ export const Rot = () => {
         <Nebver/>
         <Outlet/>
         <Footer/>
+        
     </div>
   )
 }

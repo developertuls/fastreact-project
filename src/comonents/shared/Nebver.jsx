@@ -117,7 +117,7 @@ onClick={()=>activelinkcolor('/blogs')}>
   Home
   </Link></li>
 
-<li> <Link to={'/shop'} className={`${activelink=== '/shop' ? 'text-[#4cd137]'
+<li> <Link to={'#'} className={`${activelink=== '/shop' ? 'text-[#4cd137]'
 :'hover:text-[#4cd137]'}`}
  onClick={()=>activelinkcolor('/shop')}>
   shop

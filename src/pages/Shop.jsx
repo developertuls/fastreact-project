@@ -1,8 +1,36 @@
 
-import React from 'react'
+import { useEffect } from "react"
+import { useState } from "react"
+import { Data } from "../comonents/Data"
 
 export const Shop = () => {
+const [fakdata,setFakdata] = useState([])
+useEffect(()=>{
+  fetch('fakeData.json')
+  .then(res=>res.json())
+  .then(data=>setFakdata(data))  
+},[])
+
+
+
+
+
+
   return (
-    <div className='h-[200px] bg-red-700'>Shop</div>
+    <div className= 'overflow-hidden mt-[90px]  text-white h-[200vh]'>
+
+        <h1>datalenhgth:{fakdata.length}</h1>
+
+        {
+            fakdata.map(singeldata=><Data
+            key={singeldata.id}
+            singeldata={singeldata}
+            ></Data>)
+        }
+
+
+
+        </div>
   )
 }
+

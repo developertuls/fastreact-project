@@ -1,0 +1,143 @@
+
+ [
+  {
+    "name": "Bugatti Chiron Super Sport 300+",
+    "price": "$3.9 Million",
+    "details": "Carbon fiber body, quad-turbo W16 engine, 1600 horsepower",
+    "speed": "490 km/h",
+    "image": "https://imgur.com/Rs9EUEI.png"
+  },
+  {
+    "name": "Lamborghini Veneno",
+    "price": "$4.5 Million",
+    "details": "Limited edition hypercar, V12 engine, only 14 units made",
+    "speed": "355 km/h",
+    "image": "https://imgur.com/0IlYL8S.png"
+  },
+  {
+    "name": "Rolls-Royce Boat Tail",
+    "price": "$28 Million",
+    "details": "World’s most expensive car, bespoke design, luxury yacht-inspired",
+    "speed": "250 km/h",
+    "image": "https://imgur.com/a/SvEK1Q4.png"
+  },
+  {
+    "name": "Ferrari SF90 Stradale",
+    "price": "$625,000",
+    "details": "Hybrid supercar with 1000 hp, all-wheel drive",
+    "speed": "340 km/h",
+    "image": "https://imgur.com/PL5ANBM.png"
+  },
+  {
+    "name": "Koenigsegg Jesko Absolut",
+    "price": "$3.4 Million",
+    "details": "Designed for top speed records, V8 twin-turbo, extreme aerodynamics",
+    "speed": "531 km/h",
+    "image": ""
+  },
+  {
+    "name": "McLaren Speedtail",
+    "price": "$2.3 Million",
+    "details": "3-seat layout, futuristic hybrid hyper-GT",
+    "speed": "402 km/h",
+    "image": ""
+  },
+  {
+    "name": "Pagani Huayra Roadster BC",
+    "price": "$3.5 Million",
+    "details": "Carbon-titanium build, handcrafted interior, 800 hp",
+    "speed": "370 km/h",
+    "image": ""
+  },
+  {
+    "name": "Aston Martin Valkyrie",
+    "price": "$3 Million",
+    "details": "F1-level performance, Cosworth V12 engine, 1160 hp",
+    "speed": "355 km/h",
+    "image": ""
+  },
+  {
+    "name": "Mercedes-AMG One",
+    "price": "$2.7 Million",
+    "details": "F1 engine in a road car, hybrid system, limited to 275 units",
+    "speed": "352 km/h",
+    "image": ""
+  },
+  {
+    "name": "Rimac Nevera",
+    "price": "$2.2 Million",
+    "details": "All-electric hypercar, 0-100 km/h in 1.85s, 1914 hp",
+    "speed": "412 km/h",
+    "image": ""
+  },
+  {
+    "name": "Lotus Evija",
+    "price": "$2.3 Million",
+    "details": "All-electric British hypercar, 2000 hp, limited production",
+    "speed": "320 km/h",
+    "image": ""
+  },
+  {
+    "name": "Bentley Mulliner Bacalar",
+    "price": "$2 Million",
+    "details": "Handcrafted luxury roadster, only 12 made",
+    "speed": "322 km/h",
+    "image": ""
+  },
+  {
+    "name": "SSC Tuatara",
+    "price": "$2 Million",
+    "details": "Aerodynamic carbon fiber body, V8 engine, claimed 508 km/h",
+    "speed": "455 km/h",
+    "image": ""
+  },
+  {
+    "name": "Hennessey Venom F5",
+    "price": "$2.1 Million",
+    "details": "6.6L twin-turbo V8, designed for 500+ km/h",
+    "speed": "484 km/h",
+    "image": ""
+  },
+  {
+    "name": "Devel Sixteen",
+    "price": "$1.8 Million",
+    "details": "5,007 hp concept hypercar with quad-turbo 16-cylinder engine",
+    "speed": "500+ km/h (claimed)",
+    "image": ""
+  },
+  {
+    "name": "Ferrari LaFerrari Aperta",
+    "price": "$2.2 Million",
+    "details": "Hybrid hypercar with F1 tech, 950 hp, limited edition",
+    "speed": "350 km/h",
+    "image": ""
+  },
+  {
+    "name": "Pininfarina Battista",
+    "price": "$2.5 Million",
+    "details": "Electric hyper-GT, 1900 hp, Italian design & engineering",
+    "speed": "350 km/h",
+    "image": ""
+  },
+  {
+    "name": "Zenvo TSR-S",
+    "price": "$1.7 Million",
+    "details": "Unique rear wing dynamics, Danish-made, 1177 hp",
+    "speed": "325 km/h",
+    "image": ""
+  },
+  {
+    "name": "Bugatti Divo",
+    "price": "$5.8 Million",
+    "details": "Track-focused Bugatti, lighter and more agile than Chiron",
+    "speed": "380 km/h",
+    "image": ""
+  },
+  {
+    "name": "Aston Martin Victor",
+    "price": "$2 Million",
+    "details": "Manual V12 one-off car, vintage-modern design fusion",
+    "speed": "321 km/h",
+    "image": ""
+  }
+]

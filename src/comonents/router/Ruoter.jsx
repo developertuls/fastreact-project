@@ -33,10 +33,10 @@ const router=createBrowserRouter([
                 path:'blogs',
                 Component:Blog
             },
-            {
-                path:'shop',
-                Component:Shop
-            },
+            // {
+            //     path:'shop',
+            //     Component:Shop
+            // },
             
             {
                 path:'contactus',

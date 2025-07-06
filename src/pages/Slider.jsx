@@ -29,7 +29,7 @@ export const Slider = () => {
     alt="Rotating Car"
     className="w-[180px] h-[180px] object-contain rounded-full animate-rotate-car"
   />
-  <div className="absolute    mb-[-139px] left-20 text-[#d4dee4] text-sm md:text-[26px] font-bold  px-3 py-1 rounded shadow ">
+  <div className="absolute  animate-bounce  mb-[-139px] left-20 text-[#d4dee4] text-sm md:text-[26px] font-bold  px-3 py-1 rounded shadow ">
     {slide.text}
   </div>
 </div>
