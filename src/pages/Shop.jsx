@@ -17,9 +17,9 @@ useEffect(()=>{
 
 
   return (
-    <div className= 'overflow-hidden mt-[90px]  text-white h-[200vh]'>
+    <div className= 'bg- gap-2 md:gap-4 overflow-hidden mt-[90px]  text-black grid md:grid-cols-4 sm:grid-cols-2'>
 
-        <h1>datalenhgth:{fakdata.length}</h1>
+        {/* <h1>datalenhgth:{fakdata.length}</h1> */}
 
         {
             fakdata.map(singeldata=><Data

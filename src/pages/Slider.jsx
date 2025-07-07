@@ -13,7 +13,7 @@ export const Slider = () => {
       {/* Box 1 */}
       <div className="bg-[#181b23] text-white overflow-hidden w-full md:w-[160px] h-[200px] shadow rounded p-4 text-center order-2 md:order-1 flex-shrink-0">
         <h4 className="font-semibold text-[#d4dee4]">Power Reserve</h4>
-        <div className="animate-pulse mt-4 mx-auto w-[80px] h-[80px] bg-[#c2ef2d] rounded-full flex items-center justify-center">
+        <div className="animate-pulse mt-4 mx-auto w-[80px] h-[80px] bg-[#32ff7e] rounded-full flex items-center justify-center">
           <div className="w-[78px] h-[78px] bg-[#181b23] rounded-full flex flex-col items-center justify-center text-[13px] font-bold">
             180 <br />
             <span className="text-xs">km/h</span>

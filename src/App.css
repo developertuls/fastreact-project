@@ -46,3 +46,50 @@ background:#130f40 ;
    font-family: "Bruno Ace SC", sans-serif ;
 }
 
+
+.box:hover{
+    
+    /* box-shadow: -2px 18px 13px #f6f6f6; */
+    transition: 1.0s;
+ 
+}
+
+
+.box:hover img{
+    background: #f6f6f6;
+    box-shadow: -2px -3px 5px  #f6f6f6;
+    border-radius: 10px;}
+
+
+
+.box:hover img{
+  
+   transition: 1.0s;
+    transform:translatey(10px) ;}
+
+    .box:hover{
+      background:#181b23 ;
+    }
+    .box:hover{
+     color: black;
+    }
+    .box:hover img{
+      background:#181b23 ;
+    }
+
+    button:hover{
+      background: #c2ef2d;
+      color: #181b23;
+      transition: 0.5s;
+    }
+
+    .relative{
+      background-image: url(assets/rot.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+/* 
+    .box:hover{
+      transform: scale(1.2);
+      transition-delay: 1s;
+    } */
