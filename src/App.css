@@ -5,7 +5,7 @@
    text-align: center; 
 } */
 @import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -33,7 +33,7 @@ transform: rotateX(370deg);
 }
 
 .absolute{
-   line-height: 35px;
+   line-height: 30px;
    font-family:"Bruno Ace SC", sans-serif ;
 }
 
@@ -83,8 +83,8 @@ background:#130f40 ;
       transition: 0.5s;
     }
 
-    .relative{
-      background-image: url(assets/rot.jpg);
+    .bgg{
+      background-image: url(assets/them.webp);
       background-position: center;
       background-size: cover;
     }
@@ -93,3 +93,27 @@ background:#130f40 ;
       transform: scale(1.2);
       transition-delay: 1s;
     } */
+
+
+    .absolute{
+      font-weight: bolder;
+    }
+
+    .imgside{
+      transform: scale(1.1);
+    }
+
+    .textside{
+      font-family: sans-serif;
+    }
+
+    .map{
+      
+      background-image: url(assets/map3.jpg);
+      background-position: center;
+      background-size: contain;
+    }
+
+    .buy{
+     font-family: "Ubuntu", sans-serif;
+    }

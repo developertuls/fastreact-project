@@ -5,6 +5,7 @@ import { Blog } from "../../pages/Blog";
 import { About } from "../../pages/About";
 import { Shop } from "../../pages/Shop";
 import { Contactus } from "../../pages/Contactus";
+import { Slider } from "../../pages/Slider";
 
 
 
@@ -45,7 +46,8 @@ const router=createBrowserRouter([
             {
                 path:'logo',
                 Component:Home
-            }
+            },
+          
         ]
     }
 ])

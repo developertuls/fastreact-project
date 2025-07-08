@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Data } from "../comonents/Data"
 
 export const Shop = () => {
+  
 const [fakdata,setFakdata] = useState([])
 useEffect(()=>{
   fetch('fakeData.json')

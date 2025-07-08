@@ -8,9 +8,11 @@ import Footer from '../pages/Foter'
 
 
 
+
 export const Rot = () => {
   return (
     <div className=''>
+    
         <Nebver/>
         <Outlet/>
         <Footer/>
