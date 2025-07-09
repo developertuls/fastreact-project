@@ -57,7 +57,7 @@ export const Oneimges = () => {
 <div className="px-4 md:px-10 py-10 bg-[#f8f9fa]">
   
 
-  <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+  <div className="flex flex-col lg:flex-row  items-center justify-between gap-6">
 
     {/* === Left Side: Two Paragraphs Side-by-Side === */}
     <div className="flex flex-col sm:flex-row gap-6 flex-1 ">
@@ -66,7 +66,7 @@ export const Oneimges = () => {
       <div className="flex items-start gap-3 bg-white p-4 rounded shadow-sm flex-1">
          <img className="bg-[#22a6b3] rounded-full w-10 h-10 mt-1 shrink-0" src="src/assets/ss.png" alt="online" /> 
        
-        <p className="text-sm text-gray-700 leading-relaxed">
+        <p className="text-sm text-gray-700 leading-relaxed ">
           Explore and pick your dream car from our online collection.
         </p>
       </div>
