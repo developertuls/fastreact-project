@@ -39,7 +39,7 @@ text: " Drive the Dream,Live     theLuxury",
     alt="Rotating Car"
     className="w-[180px] h-[180px] object-contain rounded-full animate-rotate-car"
   />
-  <div className="absolute  animate-bounce  mb-[-139px] left-20 text-[#d4dee4] text-sm md:text-[27px] font-bold  px-3 py-1 rounded shadow ">
+  <div className="slidein-text  absolute  animate-bounce  mb-[-139px] left-20 text-[#d4dee4] text-sm md:text-[27px] font-bold  px-3 py-1 rounded shadow ">
     {slide.text}
   </div>
 </div>

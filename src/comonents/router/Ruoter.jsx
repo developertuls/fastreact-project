@@ -6,6 +6,7 @@ import { About } from "../../pages/About";
 import { Shop } from "../../pages/Shop";
 import { Contactus } from "../../pages/Contactus";
 import { Slider } from "../../pages/Slider";
+import { Readmor } from "../../pages/Readmor";
 
 
 
@@ -46,6 +47,10 @@ const router=createBrowserRouter([
             {
                 path:'logo',
                 Component:Home
+            },
+            {
+                path:'read',
+                Component:Readmor
             },
           
         ]

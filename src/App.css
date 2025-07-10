@@ -32,7 +32,7 @@ transform: rotateX(370deg);
   }
 }
 
-.absolute{
+.slidein-text{
    line-height: 30px;
    font-family:"Bruno Ace SC", sans-serif ;
 }
@@ -78,7 +78,7 @@ background:#130f40 ;
     }
 
     button:hover{
-      background: #c2ef2d;
+      
       color: #181b23;
       transition: 0.5s;
     }

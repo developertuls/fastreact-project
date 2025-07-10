@@ -57,39 +57,41 @@ transition={{direction:1.9}}
               <h2 className="mt-8 text-lg font-semibold mb-2">
                Must-check documents before buying a car
               </h2>
-              <p className=" text-gray-600 text-sm ">
-               Avoid costly mistakes know which papers to verify before your purchase
+              <p className=" text-gray-600 text-[12px]">
+               Avoid costly mistakes know which papers to verify before your purchase.
               </p>
-              <button className="border rounded-lg px-2 py-1 hover:bg-[#38ada9] mt-3 text-blue-600 hover:underline text-sm">Read more</button>
+              <Link to={'/read'}><button className="border rounded-lg px-2 py-1 hover:bg-[#38ada9] mt-3 text-blue-600 hover:underline text-sm">Read more</button></Link>
             </div>
           </div>
 
           {/* Card 2 */}
           <div className="bg-[#e6f4f5] shadow-md rounded-md overflow-hidden">
-            <img src="src/assets/cd.png " className="bg-[#6cb0fb] mx-auto mt-9 rounded-full max-w-[50%]" />
+            <img src="src/assets/cd.png " className="animate-pulse bg-[#6cb0fb] mx-auto mt-9 rounded-full max-w-[50%]" />
             <div className="p-4">
               <h2 className="text-lg font-semibold mb-2">
                buy car online but..!!
               </h2>
-              <p className="text-gray-600 text-sm ">
+              <p className="text-[12px]">
                 Things You Should Do When Buying a Car Online or
-                Essential Steps to Follow When Purchasing a Car Online
+                Essential Steps to Follow When Purchasing a Car Online.
               </p>
               <button className="mt-3 text-blue-600 hover:bg-[#38ada9]  hover:underline text-sm px-2 py-1 rounded-lg border">Read more</button>
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white shadow-md rounded-md overflow-hidden">
-            <img src="src/assets/blog3.jpg" className="w-full h-40 object-cover" />
+          <div className="bg-[#e6f4f5] shadow-md rounded-md overflow-hidden">
+            <img src="src/assets/was1.webp" className="mt-7   w-[90%] mx-auto  object-cover" />
             <div className="p-4">
               <h2 className="text-lg font-semibold mb-2">
               5 Best Tips for Car Maintenance
               </h2>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-[12px]">
                Keep your car running like new with these essential maintenance tips.
               </p>
-              <button className="mt-3 text-blue-600 hover:underline text-sm">Read more</button>
+              <button className="mt-3 text-blue-600 hover:underline text-sm
+                hover:bg-[#38ada9]  px-2 py-1 rounded-lg border
+              ">Read more</button>
             </div>
           </div>
 
