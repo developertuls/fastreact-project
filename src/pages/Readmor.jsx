@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
-// import { motion } from "motion/react";
+import { motion } from "motion/react";
 
 
 
@@ -92,23 +92,29 @@ setIsopenp10(!isopenp10);
   
 
   return (
-    <div className="bg-white mt-[80px] h-[800vh] ">
-        <div className="grid md:grid-cols-2">
+    <div className="bg-white mt-[80px] ">
+        <motion.div
+        initial={{transition:0,opacity:0,scaleY:0,radius:0}}
+    animate={{opacity:1,scaleY:1,radius:600}}
+    transition={{duration:1.3}}
+         className=" grid md:grid-cols-2 gap-[80px] p-9">
 
             {/* ======AlertBox=1==== */}
-<div className=" relative flex ">
+<div className=" relative  flex w-full ">
 
         {/* ImageAlertbox=1 */}
-<div className=" border-2 p-9  mt-[9px] flex  items-center md:gap-2 rounded-lg">
+<motion.div
+ 
+ className="mx-auto border-2 p-9  mt-[9px] flex  items-center md:gap-2 rounded-lg">
 
         <img
-          className="hidden w-[10%] rounded-full md:block sm:block"
+          className="hidden w-[10%]  rounded-full md:block sm:block"
           src="src/assets/do.png"
           alt="Car Document"
           />
 
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
     Must-check documents before buying a car
     </h2> 
 
@@ -119,7 +125,7 @@ onClick={phidden1} className="flex-shrink-0">
 <IoIosArrowUp
 className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isopenp1 ? "rotate-180" : "rotate-0"}`}/>
 </button>
-</div>
+</motion.div>
 
 <p
 
@@ -145,7 +151,7 @@ save you from major headaches.
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
     Avoid costly mistakes verify these documents first
     </h2>   
 
@@ -160,7 +166,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp2 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp2 ? "block" : "hidden"}`}>
 
 Missing or incorrect paperwork can cost you. Double-check before committing.
 
@@ -183,7 +189,7 @@ Missing or incorrect paperwork can cost you. Double-check before committing.
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
     What to check before signing a car deal
     </h2>   
 
@@ -198,7 +204,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp3 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp3 ? "block" : "hidden"}`}>
 Review every line of the documents before you sign it’s smarter than fixing problems later.
 
 
@@ -220,7 +226,7 @@ Review every line of the documents before you sign it’s smarter than fixing pr
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
    Essential paperwork you need for car purchase
     </h2>   
 
@@ -235,7 +241,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp4 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp4 ? "block" : "hidden"}`}>
 From tax tokens to ownership papers know what must be included.
 
 
@@ -256,7 +262,7 @@ From tax tokens to ownership papers know what must be included.
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
    Don't skip these 5 documents when buying a car
     </h2>   
 
@@ -271,7 +277,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp5 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp5 ? "block" : "hidden"}`}>
 Skipping any of these can cost you big. Be safe, not sorry.
 
 
@@ -292,7 +298,7 @@ Skipping any of these can cost you big. Be safe, not sorry.
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
 Buying a used car? Read this checklist
     </h2>   
 
@@ -307,7 +313,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp6 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp6 ? "block" : "hidden"}`}>
 Used cars need extra attention. Here’s what you should verify.
 
 
@@ -329,7 +335,7 @@ Used cars need extra attention. Here’s what you should verify.
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
 Be smart check these before the test drive
     </h2>   
 
@@ -344,7 +350,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp7 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp7 ? "block" : "hidden"}`}>
 It’s not just about performance. Legal papers matter too.
 
 
@@ -367,7 +373,7 @@ It’s not just about performance. Legal papers matter too.
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
 Vehicle ownership papers you must verify
     </h2>   
 
@@ -382,7 +388,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp8 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp8 ? "block" : "hidden"}`}>
 Confirm ownership to avoid future disputes or legal issues.
 
 
@@ -393,17 +399,17 @@ Confirm ownership to avoid future disputes or legal issues.
 </div> 
 
 {/*======== AlertBox=9==== */}
-<div className="flex relative">
+<div className="flex relative mb-[60px]">
 
        
-<div className=" border-2 p-9  mt-[9px] flex  items-center md:gap-2 rounded-lg">
+<div className="w-full border-2 p-9  mt-[9px] flex  items-center md:gap-2 rounded-lg">
         <img
           className="hidden w-[10%] rounded-full md:block sm:block"
           src="src/assets/do.png"
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
 Road tax, registration, and more stay informed
     </h2>   
 
@@ -418,7 +424,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp9 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp9 ? "block" : "hidden"}`}>
  Make sure all dues are paid and records are valid.
 
 
@@ -429,7 +435,7 @@ className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 roun
 </div> 
 
 {/*======== AlertBox=10==== */}
-<div className="flex relative">
+<div className="flex relative mb-[60px]">
 
        
 <div className=" border-2 p-9  mt-[9px] flex  items-center md:gap-2 rounded-lg">
@@ -439,7 +445,7 @@ className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 roun
           alt="Car Document"
         />
 
-    <h2 className="text-[16px] font-semibold ">
+    <h2 className="text-[13px] font-semibold ">
 How to avoid legal trouble while buying a car
     </h2>   
 
@@ -454,7 +460,7 @@ className={`ml-[-8]  w-4 h-4 transform transition-transform duration-300 ${isope
 
 <p
 
-className={`ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp10 ? "block" : "hidden"}`}>
+className={`md:ml-[39px] absolute mt-[120px]  w-full md:w-[90%] sm:w-[90%] p-5 rounded-full overflow-hidden  bg-[#f0f2f1] text-[12px] font-semibold  transition-all duration-300 ${isopenp10 ? "block" : "hidden"}`}>
 Legal issues often start with missing documents. Check first.
 
 
@@ -464,8 +470,8 @@ Legal issues often start with missing documents. Check first.
 
 </div> 
 
-       
-  </div>
+  </motion.div>
+
     </div>
   );
 };

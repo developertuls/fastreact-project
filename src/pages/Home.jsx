@@ -17,7 +17,7 @@ import { Slider } from "./Slider"
 
 export const Home = () => {
   return (
-    <div>
+    <div className="">
      <Slider/>
     <Oneimges/>
     <Shop/>

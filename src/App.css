@@ -39,7 +39,7 @@ transform: rotateX(370deg);
 
 body{
   overflow-x: hidden;  
-background:#130f40 ;
+background:#fff;
 }
 
 .logo{
@@ -79,7 +79,7 @@ background:#130f40 ;
 
     button:hover{
       
-      color: #181b23;
+      
       transition: 0.5s;
     }
 

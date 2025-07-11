@@ -11,7 +11,7 @@ export const Oneimges = () => {
     <div className="bg-white">
  <div className="text-[#130f40] min-h-screen bg-white flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-10 py-8">      
       <div className="md:container md:flex md:mx-auto items-center justify-center">
-      {/* ✅ Text Side */}
+      {/* Text Side */}
       <div className=" w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
         <h2 className=" textside text-[17px] md:text-3xl font-semibold  leading-relaxed mt-9 sm:mt-0 md:mt-0">
           
@@ -27,8 +27,8 @@ export const Oneimges = () => {
 
       </div>
 
-      {/* ✅ Image Side */}
-      <div className=" map w-full md:w-[40%] bg-[#6D214F]  rounded-lg p-6 relative h-[195px] flex items-center justify-center mt-3 md:mt-0">
+      {/*  Image Side */}
+      <div className=" animate-pulse map w-full md:w-[40%] bg-[#6D214F]  rounded-lg p-6 relative h-[195px] flex items-center justify-center mt-3 md:mt-0">
         <span className="text-black px-1 py-1  rounded-sm bg-white font-medium absolute top-3 left-3 ">$3.9million</span>
         <img
           className="ml-[-45px]   imgside absolute bottom-[-39px] w-full max-h-[140px] object-contain"

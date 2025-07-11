@@ -23,7 +23,7 @@ export const Data = ({ singeldata }) => {
   };
 
   return (
-    <div className=' hover:bg-gray-100 transition duration-200 h-[320px] flex flex-col justify-between rounded-sm  box bg-white border overflow-hidden p-4 text-left'>
+    <div className='mt-[] hover:bg-gray-100 transition duration-200 h-[320px] flex flex-col justify-between rounded-sm  box bg-white border overflow-hidden p-4 text-left'>
       {/* Top Content */}
 
        <div className='flex-grow'>
