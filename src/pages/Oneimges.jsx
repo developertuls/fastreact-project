@@ -8,8 +8,8 @@ import { GiLaptop } from "react-icons/gi";
 export const Oneimges = () => {
   return (
     
-    <div className="bg-white">
- <div className="text-[#130f40] min-h-screen bg-white flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-10 py-8">      
+    <div className="bgonimges">
+ <div className="text-[] min-h-screen  flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-10 py-8">      
       <div className="md:container md:flex md:mx-auto items-center justify-center">
       {/* Text Side */}
       <div className=" w-full md:w-1/2 mt-6 md:mt-0 text-center md:text-left">
@@ -49,12 +49,12 @@ export const Oneimges = () => {
 
   {/*== buy your car your way div== */}
  <div className="buy ">
- <hr />   
+ {/* <hr />    */}
 
      
-<div className="px-4 md:px-10 py-10 bg-[#f8f9fa]">
- <h3 className="font-medium text-[25px] text-center">buy your car your way</h3> 
-<div className="px-4 md:px-10 py-10 bg-[#f8f9fa]">
+<div className="px-4 md:px-10 py-10 buy">
+ <h3 className="font-medium text-[25px] text-center ">buy your car your way</h3> 
+<div className="mt-6  px-4 md:px-10 py-10 bg-[#f8f9fa] buy rounded-lg">
   
 
   <div className="flex flex-col lg:flex-row  items-center justify-between gap-6">
@@ -63,18 +63,18 @@ export const Oneimges = () => {
     <div className="flex flex-col sm:flex-row gap-6 flex-1 ">
       
       {/* First P */}
-      <div className="flex items-start gap-3 bg-white p-4 rounded shadow-sm flex-1">
+      <div className="  flex items-start gap-3 buyp text-[#fff] p-4 rounded shadow-sm flex-1">
          <img className="bg-[#22a6b3] rounded-full w-10 h-10 mt-1 shrink-0" src="src/assets/ss.png" alt="online" /> 
        
-        <p className="text-sm text-gray-700 leading-relaxed ">
+        <p className="text-[14px]  leading-relaxed ">
           Explore and pick your dream car from our online collection.
         </p>
       </div>
 
       {/* Second P */}
-      <div className="flex items-start gap-3 bg-white p-4 rounded shadow-sm flex-1">
+      <div className="flex items-start gap-3 buyp p-4 rounded shadow-sm flex-1">
         <img className="rounded-full w-10 h-10 mt-1 shrink-0 bg-[#22a6b3]" src="src/assets/deli.png " alt="email" />
-        <p className="text-sm text-gray-700 leading-relaxed">
+        <p className="text-[14px] leading-relaxed">
           After you select your desired car, our representative will get in touch with you via email.
         </p>
        
@@ -88,7 +88,7 @@ export const Oneimges = () => {
   to={'/shop'}
   className="w-full md:w-auto flex justify-center md:justify-start"
 >
-  <button className="block animate-pulse  py-2  px-2 text-[12px] hover:bg-slate-300 font-semibold border rounded-full">
+  <button className="block animate-pulse  py-1  px-3 text-[12px] hover:bg-slate-300 font-semibold border rounded-full">
     Get started 
   </button>
 </Link>
@@ -96,11 +96,11 @@ export const Oneimges = () => {
 
 
 {/* formcar */}
- <div className="bg-[#f8f9fa]  p-5 mx-auto rounded-lg shadow-md">
+ <div className="buy  p-5 mx-auto rounded-lg shadow-md">
       
        
      
-        <span className="text-base font-normal text-gray-600">Kindly provide your email address below.</span>
+        <span className="text-base font-normal text-[#fff]">Kindly provide your email address below.</span>
     
 
       <form className="mt-3">
@@ -112,13 +112,13 @@ export const Oneimges = () => {
           id="email"
           name="email"
           required
-          placeholder="e@gmail.com"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#1f2635]"
+          placeholder="email.com"
+          className="text-black w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#FFC312]"
         />
 
         <button
           type="submit"
-          className="mt-4 w-full bg-[#1f2635] text-white py-2 rounded hover:bg-[#2c3e50] transition"
+          className="mt-4 w-full bg-[#1B1464] text-white py-2 rounded hover:bg-[#9895bf] transition"
         >
           Submit
         </button>

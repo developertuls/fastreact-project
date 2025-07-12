@@ -1,7 +1,15 @@
 
 import { FaStar, FaRegStar, FaStarHalfAlt } from 'react-icons/fa';
 
-export const Data = ({ singeldata }) => {
+
+
+
+
+
+
+export const Data = ({singeldata,addtoCart}) => {
+
+ 
   const { name, image, price, speed, details, model, rating = 4 } = singeldata;
 
     const renderStars = () => {
@@ -31,8 +39,8 @@ export const Data = ({ singeldata }) => {
         <img
           className='mt-4 hover:shadow-md hover:cursor-pointer bg-[#f6f6f6] rounded-         [10px] mx-auto mb-2 h-[100px] w-auto object-contain'
           src={image}
-          alt={name}
-        />
+          alt={name}/>
+        
 
          <div className='mt-4 font-medium'>
           <hr  className='mt-5'/>
@@ -49,7 +57,7 @@ export const Data = ({ singeldata }) => {
       </div>
 
       {/* Bottom Button */}
-      <button className='mt-[-4px]   transition text-white font-semibold px-3 py-1 text-sm rounded bg-[#1f2635] hover:py-2 hover:p-1 hover:underline underline-offset-2'>
+      <button onClick={()=>addtoCart(singeldata)}  className='mt-[-4px]   transition text-white font-semibold px-3 py-1 text-sm rounded bg-[#22a6b3] hover:py-2 hover:px-2 hover:underline underline-offset-2'>
         Shop New Car
       </button>
     </div>

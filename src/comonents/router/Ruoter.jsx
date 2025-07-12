@@ -7,6 +7,7 @@ import { Shop } from "../../pages/Shop";
 import { Contactus } from "../../pages/Contactus";
 import { Slider } from "../../pages/Slider";
 import { Readmor } from "../../pages/Readmor";
+import { Detels } from "../../pages/Detels";
 
 
 
@@ -52,6 +53,8 @@ const router=createBrowserRouter([
                 path:'read',
                 Component:Readmor
             },
+
+          
           
         ]
     }

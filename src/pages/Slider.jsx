@@ -17,7 +17,7 @@ text: " Drive the Dream,Live     theLuxury",
 
 
   return (
-      <div className="bg-[#0c0e12] mt-20 flex flex-col md:flex-row items-center justify-center gap-4 px-4 py-6 w-full ">
+      <div className="bg-[#0c0e12] mt-[78px] flex flex-col md:flex-row items-center justify-center gap-4 px-4 py-6 w-full ">
       {/* Box 1 */}
       <div className="bg-[#181b23] text-white overflow-hidden w-full md:w-[160px] h-[200px] shadow rounded p-4 text-center order-2 md:order-1 flex-shrink-0">
       <h4 className="font-semibold text-[#d4dee4]">Power Reserve</h4>

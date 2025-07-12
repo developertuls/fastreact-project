@@ -11,7 +11,8 @@ import { motion } from "motion/react"
 
 
 
-export const Shop = () => {
+export const Shop = ({addtoCart}) => {
+  
   
 const [fakdata,setFakdata] = useState([])
 useEffect(()=>{
@@ -39,6 +40,7 @@ useEffect(()=>{
             fakdata.map(singeldata=><Data
             key={singeldata.id}
             singeldata={singeldata}
+            addtoCart={addtoCart}
             ></Data>)
         }
 
